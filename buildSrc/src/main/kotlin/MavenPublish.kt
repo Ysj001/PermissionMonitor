@@ -58,26 +58,6 @@ fun Project.mavenPublish(groupId: String? = null, version: String? = null) {
             url = MAVEN_LOCAL
         }
 //        maven {
-//            name = "github"
-//            url = uri("https://maven.pkg.github.com/ysj001/bytecodeutil")
-//            credentials {
-//                username = property("github.username").toString()
-//                password = property("github.token").toString()
-//            }
-//        }
-        maven {
-            name = "[android-cmz-plugin]"
-            isAllowInsecureProtocol = true
-            setUrl("https://nexus.chuangzuomao.cn/repository/android-gradle-plugin/")
-            credentials {
-                username = property("czm.nexus.user.name").toString()
-                password = property("czm.nexus.user.pwd").toString()
-            }
-            authentication {
-                this.create("basic", BasicAuthentication::class.java)
-            }
-        }
-//        maven {
 //            name = "mavenCentral"
 //            setUrl(libVersion.run {
 //                if (endsWith("SNAPSHOT")) MAVEN_CENTRAL_SNAPSHOTS
