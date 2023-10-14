@@ -16,7 +16,7 @@ Android 隐私政策敏感权限监控。
    ```groovy
    dependencies {
        // 只在 debug 下依赖
-       debugRuntimeOnly(project(":lib_permission_monitor"))
+       debugRuntimeOnly("io.github.ysj001.lib:permission-monitor:1.0.0")
    }
    ```
 
