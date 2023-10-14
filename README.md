@@ -9,7 +9,7 @@ Android 隐私政策敏感权限监控。
 
 ### 使用
 
-1. 本库基于 [BCU](https://github.com/Ysj001/BytecodeUtil) 的 [modifier-aspect](https://github.com/Ysj001/BytecodeUtil/blob/master/lib_modifier_aspect/README.md) 实现如何挂载请跳转查看。
+1. 本库基于 [BCU](https://github.com/Ysj001/BytecodeUtil) 的 [modifier-aspect](https://github.com/Ysj001/BytecodeUtil/blob/master/lib_modifier_aspect/README.md) 实现，如何挂载请跳转查看。
 
 2. 在挂载好后直接在 `app` 模块添加依赖即可。
 
