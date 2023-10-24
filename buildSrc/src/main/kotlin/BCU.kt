@@ -8,7 +8,7 @@
  */
 
 private const val modifier_aspect_version = "1.0.0-beta"
-const val modifier_aspect = "io.github.ysj001.bcu:modifier-aspect:$modifier_aspect_version"
-const val modifier_aspect_api = "io.github.ysj001.bcu:modifier-aspect-api:$modifier_aspect_version"
+const val modifier_aspect = "com.github.Ysj001.bcu-modifier-aspect:modifier-aspect:$modifier_aspect_version"
+const val modifier_aspect_api = "com.github.Ysj001.bcu-modifier-aspect:modifier-aspect-api:$modifier_aspect_version"
 
-const val bcu_plugin = "io.github.ysj001.bcu:plugin:2.0.1"
+const val bcu_plugin = "com.github.Ysj001.BytecodeUtil:plugin:2.0.1"
