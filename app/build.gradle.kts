@@ -4,12 +4,14 @@ plugins {
     id("bcu-plugin")
 }
 
-bytecodeUtil {
-    loggerLevel = 0
-    modifiers = arrayOf(
-        com.ysj.lib.bcu.modifier.aspect.AspectModifier::class.java,
-    )
-    notNeed = { entryName ->
+bcu {
+    config { variant ->
+        loggerLevel = 2
+        modifiers = arrayOf(
+            com.ysj.lib.bcu.modifier.aspect.AspectModifier::class.java,
+        )
+    }
+    filterNot { variant, entryName ->
 //        false
         entryName.startsWith("kotlin/")
             || entryName.startsWith("kotlinx/")
@@ -79,6 +81,7 @@ dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
 
     // 只在 debug 下依赖
-    debugRuntimeOnly(project(":lib_permission_monitor"))
+//    debugRuntimeOnly(project(":lib_permission_monitor"))
+    debugRuntimeOnly("io.github.ysj001.lib:permission-monitor:1.0.0")
 
 }

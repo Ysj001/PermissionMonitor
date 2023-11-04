@@ -56,13 +56,15 @@ Android 隐私政策敏感权限监控。基于 [BCU](https://github.com/Ysj001/
    }
    
    // 配置 bcu 插件
-   bytecodeUtil {
-       loggerLevel = 1
-       modifiers = arrayOf(
-           // 使用 modifier-aspect 的 Modifier 实现
-           Class.forName("com.ysj.lib.bcu.modifier.aspect.AspectModifier"),
-       )
-       notNeed = { entryName ->
+   bcu {
+       config { variant ->
+           loggerLevel = 2
+           modifiers = arrayOf(
+           	// 使用 modifier-aspect 的 Modifier 实现
+           	Class.forName("com.ysj.lib.bcu.modifier.aspect.AspectModifier"),
+           )
+       }
+       filterNot { variant, entryName ->
            entryName.startsWith("kotlin")
                || entryName.startsWith("java")
                || entryName.startsWith("com/ysj/lib/bcu/modifier")
