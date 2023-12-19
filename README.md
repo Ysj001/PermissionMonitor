@@ -75,7 +75,7 @@ Android 隐私政策敏感权限监控。基于 [BCU](https://github.com/Ysj001/
    
    dependencies {
        // 只需要在 debug 且运行时下依赖 PermissionMonitor
-       debugRuntimeOnly("com.github.Ysj001.PermissionMonitor:permission-monitor:<lastest-version>")
+       debugRuntimeOnly("com.github.Ysj001:PermissionMonitor:<lastest-version>")
    }
    ```
 
